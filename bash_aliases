@@ -1,3 +1,5 @@
+#General shortcuts
+
 alias ll='ls -l'
 alias la='ls -la'
 alias k='kubectl'

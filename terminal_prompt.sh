@@ -31,10 +31,10 @@ KUBE_PS1_CONTEXT_ENABLE="${KUBE_PS1_CONTEXT_ENABLE:-true}"
 KUBE_PS1_PREFIX="${KUBE_PS1_PREFIX-}"
 KUBE_PS1_SEPARATOR="${KUBE_PS1_SEPARATOR}"
 KUBE_PS1_DIVIDER="${KUBE_PS1_DIVIDER-:}"
-KUBE_PS1_SUFFIX="${KUBE_PS1_SUFFIX-}"
+KUBE_PS1_SUFFIX="${KUBE_PS1_SUFFIX-:}"
 KUBE_PS1_SYMBOL_COLOR="${KUBE_PS1_SYMBOL_COLOR-blue}"
 KUBE_PS1_CTX_COLOR="${KUBE_PS1_CTX_COLOR-green}"
-KUBE_PS1_NS_COLOR="${KUBE_PS1_NS_COLOR-magenta}"
+KUBE_PS1_NS_COLOR="${KUBE_PS1_NS_COLOR-yellow}"
 KUBE_PS1_BG_COLOR="${KUBE_PS1_BG_COLOR}"
 KUBE_PS1_KUBECONFIG_CACHE="${KUBECONFIG}"
 KUBE_PS1_DISABLE_PATH="${HOME}/.kube/kube-ps1/disabled"
@@ -282,6 +282,7 @@ With no arguments, turn off kube-ps1 status for this shell instance (default).
 
   -g --global  turn on kube-ps1 status globally
   -h --help    print this message
+EOF
 }
 
 _kubeoff_usage() {
@@ -294,6 +295,7 @@ With no arguments, turn off kube-ps1 status for this shell instance (default).
 
   -g --global turn off kube-ps1 status globally
   -h --help   print this message
+EOF
 }
 
 kubeon() {
@@ -367,3 +369,5 @@ kube_ps1() {
 
   echo "${KUBE_PS1}"
 }
+
+PS1='$(kube_ps1)\w \$ '
