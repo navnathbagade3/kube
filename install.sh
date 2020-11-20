@@ -28,9 +28,10 @@ tfenv use 0.12.24
 sudo apt-get update
 sudo apt-get upgrade
 
-ln -s /mnt/c/Users/nbagade/Downloads/install/install.sh .bkup/.install.sh
-ln -s /mnt/c/Users/nbagade/Downloads/install/notes.sh .bkup/.notes.sh
+ln -s /mnt/c/Users/nbagade/Downloads/kube/install.sh ~/.install.sh
+ln -s /mnt/c/Users/nbagade/Downloads/notes.sh ~/.notes.sh
 ln -s /mnt/c/Users/nbagade/Downloads .downloads
+ln -s /mnt/c/Users/nbagade/Downloads/kube .repo
 
 cat <<- 'EOF' >> "~/.bash_profile"
 if [ -n "$BASH_VERSION" ] && [ -f $HOME/.bashrc ];then
