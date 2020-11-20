@@ -74,12 +74,12 @@ alias sl='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
 
 function kex { kubectl exec -it "$1" -c "$2" -- sh; }
 
-function kgpy { kubectl get pods "$1" -o yaml > "$1_pod.yaml"; }
-function kgiy { kubectl get ingress "$1" -o yaml > "$1_ingress.yaml"; }
-function kgsy { kubectl get secrets "$1" -o yaml > "$1_secret.yaml"; }
-function kgsvcy { kubectl get svc "$1" -o yaml > "$1_svc.yaml"; }
-function kgcy { kubectl get configmaps "$1" -o yaml > "$1_configmap.yaml"; }
-function kgdy { kubectl get deployment "$1" -o yaml > "$1_deployment.yaml"; }
-function kgnsy { kubectl get ns "$1" -o yaml > "$1_ns.yaml"; }
-function kgry { kubectl get role "$1" -o yaml > "$1_role.yaml"; }
-function kgrby { kubectl get rolebinding "$1" -o yaml > "$1_rolebinding.yaml"; }
+function kgpy { kubectl get pods "$1" -o yaml; }
+function kgiy { kubectl get ingress "$1" -o yaml; }
+function kgsy { kubectl get secrets "$1" -o yaml; }
+function kgsvcy { kubectl get svc "$1" -o yaml; }
+function kgcy { kubectl get configmaps "$1" -o yaml; }
+function kgdy { kubectl get deployment "$1" -o yaml; }
+function kgnsy { kubectl get ns "$1" -o yaml; }
+function kgry { kubectl get role "$1" -o yaml; }
+function kgrby { kubectl get rolebinding "$1" -o yaml; }
