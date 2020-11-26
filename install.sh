@@ -18,6 +18,7 @@ ln -s /mnt/c/Users/nbagade/Downloads/kube .repo
 
 cp .downloads/setup/helm* .
 cp .downloads/setup/terraform.zip .
+cp .downloads/setup/kubectl .
 
 sudo touch /usr/local/bin/kubectl /usr/local/bin/kubectx /usr/local/bin/kubens /usr/local/bin/helm3 /usr/local/bin/helm2 /usr/local/bin/tf /usr/local/bin/kubectl
 sudo chmod 777 /usr/local/bin/*
