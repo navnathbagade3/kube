@@ -7,8 +7,8 @@ sudo apt-get upgrade -y
 sudo apt-get install fzf -y
 sudo apt-get install tree -y
 sudo apt-get install unzip -y
-sudo apt-get install azure-cli -y
-sudo az aks install-cli -y
+sudo apt-get install azure-cli
+sudo az aks install-cli
 
 sudo touch /usr/local/bin/kubectl /usr/local/bin/kubectx /usr/local/bin/kubens /usr/local/bin/helm3 /usr/local/bin/helm2
 sudo chmod 777 /usr/local/bin/*
