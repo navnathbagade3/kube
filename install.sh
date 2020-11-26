@@ -99,8 +99,6 @@ if [ -f terraform.zip ]; then
     echo "****************************************************************************************"
     echo "\n"
     unzip terraform.zip
-    tfenv install 0.12.24
-    tfenv use 0.12.24
     sudo mv terraform /usr/local/bin/tf
 else 
     echo "\n"
