@@ -7,7 +7,7 @@ sudo apt-get upgrade -y
 sudo apt-get install fzf -y
 sudo apt-get install tree -y
 sudo apt-get install unzip -y
-sudo apt-get install azure-cli
+sudo apt-get install azure-cli -y
 sudo az aks install-cli
 
 cd 
