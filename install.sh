@@ -26,7 +26,7 @@ curl https://get.helm.sh/helm-v2.16.12-linux-amd64.tar.gz -o helm2.tar.gz
 tar xzfv helm2.tar.gz -C helm2
 sudo mv helm2/linux-amd64/helm /usr/local/bin/helm2
 
-rm -rf helm2 helm3
+rm -rf helm2 helm3 helm3.tar.gz helm2.tar.gz
 
 #installing terraform
 
