@@ -20,7 +20,7 @@ ln -s /mnt/c/Users/nbagade/Downloads .downloads
 ln -s /mnt/c/Users/nbagade/Downloads/kube .repo
 
 cp .downloads/setup/helm* .
-cp .downloads/setup/terra* .
+cp .downloads/setup/terraform.zip .
 
 sudo touch /usr/local/bin/kubectl /usr/local/bin/kubectx /usr/local/bin/kubens /usr/local/bin/helm3 /usr/local/bin/helm2 /usr/local/bin/tf
 sudo chmod 777 /usr/local/bin/*
@@ -60,16 +60,16 @@ mkdir -p ~/.local/bin/
 . ~/.profile
 ln -s ~/.tfenv/bin/* ~/.local/bin
 
-if [ -f terraform_0.12.24_linux_amd64.zip ]; then
-    echo "terraform_0.12.24_linux_amd64.zip exists."
-    unzip terraform_0.12.24_linux_amd64.zip
+if [ -f terraform.zip ]; then
+    echo "terraform.zip exists."
+    unzip terraform.zip
     tfenv install 0.12.24
     tfenv use 0.12.24
     sudo mv terraform /usr/local/bin/tf
 else 
-    echo "terraform_0.12.24_linux_amd64.zip does not exist."
-    curl https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip  -o terraform_0.12.24_linux_amd64.zip
-    unzip terraform_0.12.24_linux_amd64.zip
+    echo "terraform.zip does not exist."
+    curl https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip  -o terraform.zip
+    unzip terraform.zip
     tfenv install 0.12.24
     tfenv use 0.12.24
     sudo mv terraform /usr/local/bin/tf
