@@ -10,6 +10,8 @@ sudo apt-get install unzip -y
 sudo apt-get install azure-cli
 sudo az aks install-cli
 
+cd 
+
 #creating local symbolic links
 
 ln -s /mnt/c/Users/nbagade/Downloads/kube/install.sh ~/.install.sh
