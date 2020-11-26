@@ -137,8 +137,8 @@ source .terminal_prompt.sh
 EOF
 
 curl -s https://raw.githubusercontent.com/navnathbagade3/kube/main/bash_aliases -o .bash_aliases
-curl -s https://raw.githubusercontent.com/navnathbagade3/kube/main/kubectx -o kubectx
-curl -s https://raw.githubusercontent.com/navnathbagade3/kube/main/kubens -o kubens
+curl -s https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx -o kubectx
+curl -s https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens -o kubens
 curl -s https://raw.githubusercontent.com/navnathbagade3/kube/main/terminal_prompt.sh -o .terminal_prompt.sh
 
 sudo mv ./kubectx /usr/local/bin/kubectx
