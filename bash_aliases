@@ -74,6 +74,9 @@ alias sl='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
 
 function kex { kubectl exec -it "$1" -c "$2" -- sh; }
 
+function ec { echo "$1" | base64; }
+function dc { echo "$1" | base64 -d; }
+
 function kgpy { kubectl get pods "$1" -o yaml; }
 function kgiy { kubectl get ingress "$1" -o yaml; }
 function kgsy { kubectl get secrets "$1" -o yaml; }
