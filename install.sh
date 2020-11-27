@@ -2,11 +2,17 @@
 
 #installing packages
 
+echo "*********************************** installing update *****************************************************"
 sudo apt-get update -y
+echo "*********************************** installing upgrade ****************************************************"
 sudo apt-get upgrade -y
+echo "*********************************** installing fzf ********************************************************"
 sudo apt-get install fzf -y
+echo "*********************************** installing tree *******************************************************"
 sudo apt-get install tree -y
+echo "*********************************** installing unzip ******************************************************"
 sudo apt-get install unzip -y
+echo "*********************************** installing azure-cli **************************************************"
 sudo apt-get install azure-cli -y
 
 #creating local symbolic links
@@ -143,5 +149,7 @@ sudo mv ./kubectx /usr/local/bin/kubectx
 sudo mv ./kubens /usr/local/bin/kubens
 
 rm -rf helm2 helm3 helm3.tar.gz helm2.tar.gz terraform.zip
-
+sudo chmod 777 /usr/local/bin/*
 source .bashrc
+
+echo "source .bashrc"
