@@ -10,6 +10,8 @@ alias ka='kubectl apply'
 alias kds='kubectl describe'
 alias knsks='kubens kube-system'
 alias copy='clip.exe'
+alias en='base64 -w 0'
+alias dc='base64 -d'
 
 #getting resources from same namespace
 
@@ -55,8 +57,6 @@ alias kgrsa='kubectl get replicaset -A'
 
 #describing resources in namespace
 
-alias kdsp='kubectl describe pod'
-
 alias kdsp='kubectl describe pods'
 alias kdsi='kubectl describe ingress'
 alias kdss='kubectl describe secrets'
@@ -67,6 +67,12 @@ alias kdsns='kubectl describe ns'
 alias kdsr='kubectl describe role'
 alias kdsrb='kubectl describe rolebinding'
 
+#watching resources
+alias wkgp='watch kubectl get pods'
+alias wkgpa='watch kubectl get pods -A'
+alias wkgnd='watch kubectl get nodes'
+alias wkgndw='watch kubectl get nodes -o wide'
+
 #opening application need to change mount path if sublime is at different location.
 
 alias sl='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
@@ -75,8 +81,8 @@ alias sl='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
 
 function kex { kubectl exec -it "$1" -c "$2" -- sh; }
 
-function ec { echo "$1" | base64; }
-function dc { echo "$1" | base64 -d; }
+function ecs { echo "$1" | base64; }	
+function dcs { echo "$1" | base64 -d; }
 
 function kgpy { kubectl get pods "$1" -o yaml; }
 function kgiy { kubectl get ingress "$1" -o yaml; }
