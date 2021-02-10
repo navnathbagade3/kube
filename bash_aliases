@@ -9,6 +9,7 @@ alias kl='kubectl logs'
 alias ka='kubectl apply'
 alias kds='kubectl describe'
 alias knsks='kubens kube-system'
+alias copy='clip.exe'
 
 #getting resources from same namespace
 
