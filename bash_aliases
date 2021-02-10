@@ -93,3 +93,14 @@ function kgdy { kubectl get deployment "$1" -o yaml; }
 function kgnsy { kubectl get ns "$1" -o yaml; }
 function kgry { kubectl get role "$1" -o yaml; }
 function kgrby { kubectl get rolebinding "$1" -o yaml; }
+
+
+function kgpj { kubectl get pods "$1" -o json; }
+function kgij { kubectl get ingress "$1" -o json; }
+function kgsj { kubectl get secrets "$1" -o json; }
+function kgsvcj { kubectl get svc "$1" -o json; }
+function kgcj { kubectl get configmaps "$1" -o json; }
+function kgdj { kubectl get deployment "$1" -o json; }
+function kgnsj { kubectl get ns "$1" -o json; }
+function kgrj { kubectl get role "$1" -o json; }
+function kgrbj { kubectl get rolebinding "$1" -o json; }
