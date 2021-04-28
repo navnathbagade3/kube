@@ -15,7 +15,7 @@ alias dc='base64 -d'
 
 #getting resources from same namespace
 
-alias kga='kubectl get all'
+alias kga="echo -e '\n->' deployment  ; kubectl get deployment ; echo -e '\n->' secrets  ; kubectl get secrets ; echo -e '\n->' svc  ; kubectl get svc ; echo -e '\n->' ingress  ; kubectl get ingress"
 alias kgp='kubectl get pods'
 alias kgi='kubectl get ingress'
 alias kgs='kubectl get secrets'
@@ -45,6 +45,8 @@ alias kdelrs='kubectl delete replicaset'
 #getting resources from across cluster
 
 alias kgpa='kubectl get pods -A'
+alias kgpw='kubectl get pods -o wide'
+alias kgpaw='kubectl get pods -A -o wide'
 alias kgia='kubectl get ingress -A'
 alias kgsa='kubectl get secrets -A'
 alias kgsvca='kubectl get svc -A'
@@ -72,6 +74,10 @@ alias wkgp='watch kubectl get pods'
 alias wkgpa='watch kubectl get pods -A'
 alias wkgnd='watch kubectl get nodes'
 alias wkgndw='watch kubectl get nodes -o wide'
+
+#misc
+alias dl='youtube-dl'
+alias dlmp3='youtube-dl -x --audio-format mp3'
 
 #opening application need to change mount path if sublime is at different location.
 
